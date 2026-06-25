@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashbord</title>
+</head>
+<body>
+      <a hre="{% url 'home' %}">Home</a>
+
+      {% if user.is_authenticated %}
+       <a href="{% url 'dashbord' %}">dashbord</a>welcome<br>
+       <a href="{% url 'logout' %}">logout</a>
+      {% else %}
+       <a href="{% url 'register' %}">register</a>
+       <a href="{% url 'login' %}">login</a>
+       {% endif %}
+</body>
+</html>

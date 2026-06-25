@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+ 
+{% block body %}
+
+<h1>hello</h1>
+
+{% for x in player %}
+<h1>{{x.name}}</h1>
+{% endfor %}
+
+<table>
+    <thead>
+
+    </thead>
+    <tbody>
+        {% for i in p %}
+        <tr>
+            <td><a href="{% url 'info' i.id %}" {{i.id}}></a></td>
+            <td>{{i.name}}</td>
+            <td>{{i.runs}}</td>
+            <td>{{i.profile}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.dob}}</td>
+
+
+        </tr>
+    </tbody>
+</table>
+
+{% endblock body %}
+
+

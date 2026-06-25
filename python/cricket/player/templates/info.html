@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body %}
+{% for i in play %}
+{{play.id}}
+{{play.name}}
+{{play.profile}}
+{{play.email}}
+{{play.dob}}
+{{% endfor %}}
+{% endblock body %}
